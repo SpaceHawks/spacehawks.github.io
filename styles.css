@@ -1,10 +1,47 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,400i,900&display=swap&subset=latin-ext');
-
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}html{line-height:1}body{line-height:inherit;}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:'';content:none}table{border-collapse:collapse;border-spacing:0}
+
+a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block
+}
+
+html {
+  line-height: 1
+}
+
+body {
+  line-height: inherit;
+}
+
+ol, ul {
+  list-style: none
+}
+
+blockquote, q {
+  quotes: none
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0
+}
 
 /* TODO: Change everything to em values */
 
@@ -13,8 +50,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 html {
   box-sizing: border-box;
   font-family: "Poppins", Helvetica, Arial, sans-serif;
-  font-size: 20px; /* f = 20 */
-  line-height: 1.5em; /* l = 30 */
+  font-size: 20px;
+  /* f = 20 */
+  line-height: 1.5em;
+  /* l = 30 */
   scroll-behavior: smooth;
 }
 
@@ -27,19 +66,17 @@ a:link, a:visited {
   text-decoration: none;
 }
 
-
 /* Nav stuff */
 
 nav {
   display: block;
   background: #1A2324;
   color: #BDB3B1;
-
   min-height: 10vh;
   width: 100%;
-
   transition: width 500ms ease;
 }
+
 nav ul {
   align-items: center;
   display: flex;
@@ -73,7 +110,7 @@ nav ul {
   height: max-content;
   height: 100%;
   width: 100vw;
-  transition: color,background 100ms linear;
+  transition: color, background 100ms linear;
   height: 8vh;
   display: none;
   justify-content: center;
@@ -114,9 +151,10 @@ nav ul img {
   outline: none;
 }
 
-.nav-button:hover, /* Swap colors on hover */
-.nav-button:focus,
-.nav-button:active {
+.nav-button:hover,
+/* Swap colors on hover */
+
+.nav-button:focus, .nav-button:active {
   background: #BDB3B1;
   color: #1A2324;
   border-bottom: 2px solid white;
@@ -124,19 +162,19 @@ nav ul img {
   cursor: pointer;
 }
 
-#home-page #homeButton a, /* Don't swap colors on hover if current page */
-#members-page #membersButton a,
-#gallery-page #galleryButton a,
-#sponsors-page #sponsorsButton a {
+#home-page #homeButton a,
+/* Don't swap colors on hover if current page */
+
+#members-page #membersButton a, #gallery-page #galleryButton a, #sponsors-page #sponsorsButton a {
   background: #1A2324;
   color: #BDB3B1;
   pointer-events: none;
 }
 
-#home-page #homeButton a, /* Darken current page buttons for dropdown menu */
-#members-page #membersButton a,
-#gallery-page #galleryButton a,
-#sponsors-page #sponsorsButton a {
+#home-page #homeButton a,
+/* Darken current page buttons for dropdown menu */
+
+#members-page #membersButton a, #gallery-page #galleryButton a, #sponsors-page #sponsorsButton a {
   background: #101616;
   cursor: default;
 }
@@ -150,15 +188,12 @@ header {
   font-weight: 900;
   height: 90vh;
   text-align: center;
-
   border-bottom: 5px solid #1A2324;
-
   /* TODO: Use image-set */
   background-image: url("./images/moon.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +218,6 @@ header h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
 }
 
@@ -199,7 +233,8 @@ header h1 {
   z-index: 9999;
 }
 
-.banner::before { /* Holds image behind header and maybe filter if necessary */
+.banner::before {
+  /* Holds image behind header and maybe filter if necessary */
   content: "";
   position: absolute;
   width: 100%;
@@ -212,7 +247,8 @@ header h1 {
   z-index: -1;
 }
 
-.banner::after { /* Holds linear gradient effect */
+.banner::after {
+  /* Holds linear gradient effect */
   content: "";
   position: absolute;
   width: 100%;
@@ -220,14 +256,15 @@ header h1 {
   top: 0;
   left: 0;
   z-index: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
 }
 
 .banner h2 strong {
   display: block;
 }
 
-nav + article section.banner { /* If banner is first thing on page, account for nav bar height */
+nav+article section.banner {
+  /* If banner is first thing on page, account for nav bar height */
   height: 90vh;
 }
 
@@ -243,7 +280,6 @@ nav + article section.banner { /* If banner is first thing on page, account for 
   background-image: url("./images/competition_unedited.jpg");
 }
 
-
 /* Card stuff */
 
 .card {
@@ -251,7 +287,8 @@ nav + article section.banner { /* If banner is first thing on page, account for 
   color: #BDB3B1;
   min-height: 40vh;
   padding: 40px 5%;
-  overflow: auto; /* Fixes card-logo from floating out of the box */
+  overflow: auto;
+  /* Fixes card-logo from floating out of the box */
 }
 
 .card a {
@@ -285,7 +322,8 @@ nav + article section.banner { /* If banner is first thing on page, account for 
 }
 
 .team-card {
-  min-height: 0px; /* For IE 11 */
+  min-height: 0px;
+  /* For IE 11 */
   min-height: unset;
   font-size: 20px;
 }
@@ -324,6 +362,7 @@ nav + article section.banner { /* If banner is first thing on page, account for 
 }
 
 /* Minicards */
+
 .minicard li {
   display: flex;
   flex-direction: column;
@@ -430,7 +469,6 @@ nav + article section.banner { /* If banner is first thing on page, account for 
   opacity: 1;
 }
 
-
 .team-card .image-gallery img {
   width: 100px;
 }
@@ -440,6 +478,7 @@ nav + article section.banner { /* If banner is first thing on page, account for 
 }
 
 /* Footer stuff */
+
 footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -452,6 +491,7 @@ footer {
 
 footer section {
   margin-bottom: 50px;
+  width: max-content;
 }
 
 .contact-footer ul li a {
@@ -516,10 +556,6 @@ footer ul li:hover svg {
   color: #B93B9F;
 }
 
-
-
-
-
 /* Gallery Page stuff */
 
 #gallery-page body {
@@ -545,7 +581,8 @@ footer ul li:hover svg {
 }
 
 .event-gallery li:nth-of-type(1) {
-  grid-column: 1 / -1; /* Make first gallery on its own line */
+  grid-column: 1 / -1;
+  /* Make first gallery on its own line */
   margin-top: 50px;
 }
 
@@ -570,7 +607,6 @@ footer ul li:hover svg {
   position: absolute;
   border: 1px solid #49504b;
   border-radius: 10px;
-
   transition: left 500ms, top 500ms;
 }
 
@@ -618,34 +654,31 @@ footer ul li:hover svg {
   top: -20px;
 }
 
-
 /* Media queries */
 
-@media screen and (min-width: 15.625em) { /* 250 px */
+@media screen and (min-width: 15.625em) {
+  /* 250 px */
   header h1 {
     font-size: 20px;
     padding: 30px;
   }
-
   .banner h2 {
     font-size: 30px;
   }
-
   .card h3 {
     font-size: 30px;
   }
-
   .team-card h3 {
     font-size: 30px;
   }
-
   .team-card .team-icon {
     max-width: 80px;
     max-height: 80px;
   }
 }
 
-@media screen and (min-width: 333px) { /* 333 px */
+@media screen and (min-width: 333px) {
+  /* 333 px */
   footer {
     font-size: 20px;
   }
@@ -654,91 +687,80 @@ footer ul li:hover svg {
   }
 }
 
-@media screen and (min-width: 450px) { /* 450 px */
+@media screen and (min-width: 450px) {
+  /* 450 px */
   /* Transform nav bar into horizontal one */
   nav {
     height: 10vh;
   }
-
   #navlogo {
     padding: 0 0 0 2vw;
     height: 6vh;
     max-height: 50px;
   }
-
   #navlogo-item {
     align-self: auto;
     display: block;
     width: 6vh;
     width: unset;
   }
-
   #menu-icon {
     display: none;
   }
-
   nav ul {
     flex-direction: row;
     justify-content: space-around;
   }
-
   .nav-button {
     display: flex;
-    width: 50px; /* Any bigger and a horizontal scroll can occur on 425px width devices */
+    width: 50px;
+    /* Any bigger and a horizontal scroll can occur on 425px width devices */
     padding: 0 15px;
   }
-
   #home-page #homeButton a, /* Show a red line under current page button */
-  #members-page #membersButton a,
-  #gallery-page #galleryButton a,
-  #sponsors-page #sponsorsButton a {
+  #members-page #membersButton a, #gallery-page #galleryButton a, #sponsors-page #sponsorsButton a {
     border-bottom: 2px solid #FF0000;
     margin-bottom: -2px;
     background: #1A2324;
   }
-
   header h1 {
     width: max-content;
   }
-
   .banner h2 strong {
     display: inline;
   }
-
   .card p {
     font-size: 30px;
   }
-
   .team-card h3 {
     font-size: 40px;
   }
-
   .team-card .team-icon {
     max-height: 100px;
     max-width: 100px;
   }
-
   .minicard {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   }
-
   .minicard h4 {
     font-size: 30px;
   }
-
   .contact-footer ul li a {
     display: flex;
   }
 }
 
-@media screen and (min-width: 29.6875em) { /* 475 px */
+@media screen and (min-width: 29.6875em) {
+  /* 475 px */
   #navlogo {
-    max-height: unset; /* Allow logo to be any height now that the width will compensate */
+    max-height: unset;
+    /* Allow logo to be any height now that the width will compensate */
   }
 }
 
-@media screen and (min-width: 32.125em) { /* 525 px */
+@media screen and (min-width: 32.125em) {
+  /* 525 px */
   .nav-button {
     width: 80px;
   }
@@ -748,73 +770,68 @@ footer ul li:hover svg {
   }
 }
 
-@media screen and (min-width: 43.75em) { /* 700 px */
+@media screen and (min-width: 43.75em) {
+  /* 700 px */
   nav ul {
-    justify-content: flex-start; /* Nav items should now be left-aligned */
+    justify-content: flex-start;
+    /* Nav items should now be left-aligned */
   }
-
   #githubButton {
     display: block;
   }
-
   .card {
     padding-left: 10%;
     padding-right: 10%;
   }
-
-
   .card-logo {
     width: 400px;
   }
-
   #competition .card p {
     text-align: justify;
   }
-
   .banner h2 {
     font-size: 40px;
     padding: 25px;
   }
-
   header h1 {
     font-size: 50px;
     margin: 0 auto;
   }
-
   .team-card h3 {
     font-size: 60px;
   }
-
   .team-card .team-icon {
     max-height: 100px;
     max-width: 100px;
     margin-top: 10px;
   }
-
   .team-card .image-gallery img {
     width: 150px;
   }
-
   .team-card .image-gallery li figure {
     width: 250px;
   }
 }
 
-@media screen and (min-width: 62.5em) { /* 1000 px */
+@media screen and (min-width: 46.875em) {
+  footer {
+    justify-items: center;
+  }
+}
+
+@media screen and (min-width: 62.5em) {
+  /* 1000 px */
   .card-logo {
     float: left;
     shape-outside: circle(50%);
     width: 40vw;
   }
-
   .card p {
     text-align: left;
   }
-
   .card-logo {
     width: 400px;
   }
-
   .banner h2 {
     font-size: 50px;
     padding: 50px;
@@ -824,7 +841,6 @@ footer ul li:hover svg {
     position: relative;
     z-index: 1;
   }
-
   .banner h2::before {
     content: "";
     position: absolute;
@@ -840,26 +856,21 @@ footer ul li:hover svg {
     filter: blur(5px);
     z-index: -1;
   }
-
   .team-card h3 {
     display: inline;
     font-size: 80px;
   }
-
   .team-card .team-icon {
     display: inline;
     margin-left: 20px;
     margin-top: 0px;
   }
-
   #electrical-team {
     text-align: right;
   }
-
   .team-card .image-gallery {
     margin-top: 100px;
   }
-
   footer ol li::before {
     content: '▶';
     font-size: 10px;
@@ -868,66 +879,62 @@ footer ul li:hover svg {
     left: -20px;
     transition: color 200ms ease;
   }
-
   .alt-footer ol li::before {
     color: #1A2324;
   }
 }
 
-@media screen and (min-width: 68.75em) { /* 1100 px */
+@media screen and (min-width: 68.75em) {
+  /* 1100 px */
   header h1 {
     font-size: 80px;
   }
 }
 
-@media screen and (min-width: 75em) { /* 1200 px */
+@media screen and (min-width: 75em) {
+  /* 1200 px */
   #competition .card p {
     text-align: justify;
   }
-
   .team-card {
     padding-bottom: 100px;
   }
-
   .team-card figcaption {
     font-size: 30px;
   }
-
   .team-card .image-gallery img {
     width: 200px;
   }
-
   .team-card .image-gallery li figure {
     width: 300px;
   }
-
   .team-card .member-role {
     font-size: 25px;
   }
 }
 
 /* Fixes scrolling issue on IE 11 - Thanks Stack Overflow https://stackoverflow.com/questions/27966735/why-does-a-fixed-background-image-move-when-scrolling-on-ie */
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-    html{
-        overflow: hidden;
-        height: 100%;
-    }
-    body{
-        overflow: auto;
-        height: 100%;
-    }
+  html {
+    overflow: hidden;
+    height: 100%;
+  }
+  body {
+    overflow: auto;
+    height: 100%;
+  }
 }
 
 /* Animations */
+
 @keyframes jump {
   0% {
     bottom: 0;
   }
-
   50% {
     bottom: 10px;
   }
-
   100% {
     bottom: 0;
   }
